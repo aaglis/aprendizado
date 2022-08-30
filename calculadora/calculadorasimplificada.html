@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Simplificada!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font: 400 1.2rem Poppins;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Calculadora Simplificada!</h1>
+
+        <h3>Digite os Números:</h3>
+
+        <input type="number" name="number1" id="number1">
+        <input type="number" name="number2" id="number2">
+
+        <h3>Selecione a Operação:</h3>
+
+        <select id="choice">
+            <option value="nada" disabled selected>- Selecione -</option>
+            <option value="soma">Soma</option>
+            <option value="subtracao">Subtração</option>
+            <option value="multiplicacao">Multiplicação</option>
+            <option value="divisao">Divisão</option>
+        </select><br><br>
+
+        <p id="resultado">(O resultado aparecerá aqui :D)</p>
+    </center>
+
+    <script>
+        var select = document.getElementById('choice')
+        var resultadoNaTela = document.getElementById('resultado')
+
+
+        select.addEventListener('click', calcular)
+
+        function calcular() {
+
+            var escolha = select.value
+
+            var string1 = document.getElementById('number1')
+            var string2 = document.getElementById('number2')
+            var number1 = Number(string1.value)
+            var number2 = Number(string2.value)
+
+            if (escolha == 'nada') {
+                resultadoNaTela.innerHTML = `(O resultado aparecerá aqui :D)`
+            }
+
+            else if (number1, number2 == '') {
+                resultadoNaTela.innerHTML = `Você não digitou os números corretamente, bobão.`
+            }
+
+            else if (escolha === 'soma') {
+                var soma = number1 + number2
+                resultadoNaTela.innerHTML = `<strong>${soma}</strong>`
+
+            }
+
+            else if (escolha === 'subtracao') {
+                var subtracao = number1 - number2
+                resultadoNaTela.innerHTML = `<strong>${subtracao}</strong>`
+
+            }
+
+            else if (escolha === 'multiplicacao') {
+                var multiplicacao = number1 * number2
+                resultadoNaTela.innerHTML = `<strong>${multiplicacao}</strong`
+            }
+
+            else if (escolha === 'divisao') {
+                var divisao = number1 / number2
+                resultadoNaTela.innerHTML = `<strong>${divisao}</strong>`
+            }
+            else {
+                resultadoNaTela.innerHTML = `(O resultado aparecerá aqui :D)`
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

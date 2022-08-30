@@ -1,0 +1,98 @@
++ dentro do javascript, tem a função de concatenar!
+
+o window.prompt nativamente retorna o resultado como uma string
+
+(number + number) o + trata como uma adição 
+(string + string) o + trata como uma concatenação
+
+                               ///CONVERSÕES///
+
+              STRING PARA NUMBER:
+Number.parseInt(n) -> converte a string para um numero inteiro 
+Number.parseFloat(n) -> converte a string para 
+Number(n) -> o próprio javascript escolhe qual conversão ele irá fazer (int ou float)
+
+
+              NUMBER PARA STRING: 
+String(n) -> converte a variável que for colocada entre parenteses para string
+n.toString() -> mesma coisa que o comando acima.
+
+
+
+
+                          ////OPERADORES///
+
+            ARITIMÉTICOS
++  -- SOMA
+- -- SUBTRAÇÃO
+* -- MULTIPLICAÇÃO
+/ -- DIVISÃO
+% -- RESTO DA DIVISÃO INTEIRA
+** -- POTÊNCIA
+
+------ORDEM DE PRECEDÊNCIA:
+() > ** > * / % > + -
+
+------AUTO ATRIBUIÇÃO:
+
+SE QUISER ATRIBUIR UM NOVO VALOR A UMA VARIAVEL JA EXISTENTE, ULTILIZA-SE:
+ < var += -novo valor >
+Exemplos:
+
+var n = 3
+
+n = n + 4 -- n += 4
+n = n - 5 -- n -= 5 
+n = n * 4 -- n *= 4 
+n = n / 2 --  n /= 2
+n = n**2 -- n **= 2
+n = n % 5 --  n %= 5
+
+----INCREMENTO:
+
+DA PRA SIMPLIFICAR MAIS AINDA: 
+
+n = 5
+n += 1-> n++ 
+n -= 1 -> n-- 
+
+OBS: SE EU COLOCAR O -- (OU ++) ANTES DA VARIÁVEL, É CONSIDERADO UM PRÉ INCREMENTO
+
+
+                       ///OPERADORES RELACIONAIS///
+
+IMPORTANTE DESTACAR QUE TODO OPERADOR RELACIONAL RETORNA UM VALOR BOOLEANO (TRUE OR FALSE)
+
+
+> : maior que 
+< : menor que 
+>= : maior ou igual 
+<= : menor ou igual
+== : igual 
+!= : diferente
+
+
+                       ///OPERADORES LÓGICOS///
+ ! : operador de negação, ex:
+ true -> false 
+ false -> true
+
+&& : so retorna o valor TRUE se os dois valores forem verdadeiros, ex:
+
+true && true -> true
+true && false -> false
+false && true -> false
+false && false -> FALSE
+
+|| retorna o valor TRUE se tiver os dois ou um lado verdadeiro, ex:
+true || true -> true 
+true || false -> true
+false || true  -> true
+false || false -> false
+
+---------------------HIERARQUIA DOS OPERADORES RELACIONAIS-----------------------
+      ! >> && >> ||
+
+
+                      /// HIERARQUIA DOS OPERADORES ///
+OPERADORES ARITIMÉTICOS >> OPERADORES RELACIONAIS >> OPERADORES LÓGICOS

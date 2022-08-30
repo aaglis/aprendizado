@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<!--CALCULADORA FEITA ULTILIZANDO APENAS CONDIÇOES E DOM -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcuradora alternativa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            font: 400 1.2rem Poppins;
+        }
+
+        input {
+            font-size: 18px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>Calculadora Alternativa!</h1>
+
+        <h2>Escolha a operação desejada:</h2>
+        <div>
+            <!--SOMA-->
+            <h3>SOMA:</h3>
+
+            <input type="number" name="soma1" id="soma1" placeholder="Digite um número:"> +
+            <input type="number" name="soma2" id="soma2" placeholder="Digite outro número:">
+            <button id="enviarSoma" onclick="somar()">Somar!</button>
+
+            <p id="escritaSoma"></p>
+
+            <script>
+
+                document.addEventListener("keypress", function (eventoSoma) {
+
+                    if (eventoSoma.key === "Enter")
+                        var enviarSoma = document.getElementById('enviarSoma')
+                    enviarSoma.click()
+
+                })
+
+                function somar() {
+                    var soma1 = document.getElementById('soma1')
+                    var soma2 = document.getElementById('soma2')
+                    var texto = document.getElementById('escritaSoma')
+                    var number1 = Number(soma1.value)
+                    var number2 = Number(soma2.value)
+                    var resultadoSoma = number1 + number2
+
+                    texto.innerHTML = `a soma entre ${number1} e ${number2} é igual a <strong>${resultadoSoma}</strong>`
+                    if (number1, number2 == '')
+                        texto.innerHTML = ''
+                }
+            </script>
+        </div>
+        <div>
+            <!--SUBTRAÇÃO-->
+            <h3>SUBTRAÇÃO:</h3>
+
+            <input type="number" name="sub1" id="sub1" placeholder="Digite um número:">
+            <strong> - </strong>
+            <input type="number" name="sub2" id="sub2" placeholder="Digite outro número:">
+            <button id="enviarSub" onclick="subtrair()">Subtrair!</button>
+
+            <p id="escritaSubtracao"></p>
+
+            <script>
+
+                document.addEventListener("keypress", function (eventoSub) {
+
+                    if (eventoSub.key === "Enter")
+                        var enviarSub = document.getElementById('enviarSub')
+                    enviarSub.click()
+
+                })
+                function subtrair() {
+                    var sub1 = document.getElementById('sub1')
+                    var sub2 = document.getElementById('sub2')
+                    var textoSub = document.getElementById('escritaSubtracao')
+                    var numberSub1 = Number(sub1.value)
+                    var numberSub2 = Number(sub2.value)
+                    var resultadoSubtracao = numberSub1 - numberSub2
+
+                    textoSub.innerHTML = `a subtração entre ${numberSub1} e ${numberSub2} é igual a <strong>${resultadoSubtracao}</strong>`
+                    if (numberSub1, numberSub2 == '')
+                        textoSub.innerHTML = ''
+                }
+            </script>
+        </div>
+
+        <div>
+
+            <!--MULTIPLICAÇÃO-->
+            <h3>MULTIPLICAÇÃO</h3>
+
+            <input type="number" name="mult1" id="mult1" placeholder="Digite um número:">
+            <strong> x </strong>
+            <input type="number" name="mult2" id="mult2" placeholder="Digite outro número:">
+            <button id="enviarMult" onclick="multiplicar()">Multiplicar!</button>
+
+            <p id="textoMult"></p>
+
+            <script>
+
+                document.addEventListener("keypress", function (eventoMult) {
+
+                    if (eventoMult.key === "Enter")
+                        var enviarMult = document.getElementById('enviarMult')
+                    enviarMult.click()
+
+                })
+                function multiplicar() {
+                    var mult1 = document.getElementById('mult1')
+                    var mult2 = document.getElementById('mult2')
+                    var textoMult = document.getElementById('textoMult')
+                    var numberMult1 = Number(mult1.value)
+                    var numberMult2 = Number(mult2.value)
+                    var resultadoMultiplicacao = numberMult1 * numberMult2
+
+
+                    textoMult.innerHTML = `a multiplicação entre ${numberMult1} e ${numberMult2} é igual a <strong>${resultadoMultiplicacao}</strong>`
+                    if (numberMult1, numberMult2 == '')
+                        textoMult.innerHTML = ''
+                }
+            </script>
+
+        </div>
+
+        <div>
+            <!--DIVISÃO-->
+            <h3>DIVISÃO</h3>
+
+            <input type="number" name="div1" id="div1" placeholder="Digite um número:">
+            <strong> / </strong>
+            <input type="number" name="div2" id="div2" placeholder="Digite outro número:">
+            <button id="enviarDiv" onclick="dividir()">Multiplicar!</button>
+
+            <p id="textoDiv"></p>
+
+            <script>
+
+                document.addEventListener("keypress", function (eventoDiv) {
+
+                    if (eventoDiv.key === "Enter")
+                        var enviarDiv = document.getElementById('enviarMult')
+                    enviarDiv.click()
+
+                })
+                function dividir() {
+                    var div1 = document.getElementById('div1')
+                    var div2 = document.getElementById('div2')
+                    var textoDiv = document.getElementById('textoDiv')
+                    var numberDiv1 = Number(div1.value)
+                    var numberDiv2 = Number(div2.value)
+                    var resultadoDivisao = numberDiv1 * numberDiv2
+
+
+                    textoDiv.innerHTML = `a divisão entre ${numberDiv1} e ${numberDiv2} é igual a <strong>${resultadoDivisao}</strong>`
+                    if (numberDiv1, numberDiv2 == '')
+                        textoDiv.innerHTML = ''
+                }
+            </script>
+
+
+        </div>
+
+    </center>
+</body>
+
+</html>
