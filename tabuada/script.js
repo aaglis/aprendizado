@@ -1,22 +1,23 @@
-var number = document.getElementById('number')
-var resultado = document.querySelector('textarea')
-
 function calcular() {
+
+    var number = document.getElementById('number')// trago o input
+    var resultado = document.querySelector('select')// trago o select
     if (number.value == '') {
+        // se o valor de number for nada:
         alert('[ERRO] Digite um número:')
     }
     else {
-    resultado.innerHTML =
-        `${number.value} x 1 = ${number.value * 1}
-${number.value} x 1 = ${number.value * 2}
-${number.value} x 1 = ${number.value * 3}
-${number.value} x 1 = ${number.value * 4}
-${number.value} x 1 = ${number.value * 5}
-${number.value} x 1 = ${number.value * 6}
-${number.value} x 1 = ${number.value * 7}
-${number.value} x 1 = ${number.value * 8}
-${number.value} x 1 = ${number.value * 9}
-${number.value} x 1 = ${number.value * 10}`
+        var n = Number(number.value) // var n recebe o valor do input convertido pra number
+        resultado.innerHTML = ''
+
+        var item = document.createElement('option')//crio um elemento option
+        for (var c = 1; c <= 10; c++) {
+            //var c recebe 1, enquanto c for menor ou igual a 10, c +1.
+
+
+            item.text = `${n} x ${c} = ${n * c}` // item recebe a conta
+            resultado.appendChild(item)// trago a tag filho da a pagina html
+        }
     }
 }
 
